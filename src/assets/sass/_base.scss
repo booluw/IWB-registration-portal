@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../fonts/Raleway-VariableFont_wght.ttf');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+html {font-size: 62.5%;}
+
+body {
+  font-size: 1.6rem;
+  font-family: Raleway, sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 2rem;
+  }
+}

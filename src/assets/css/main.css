@@ -1,0 +1,539 @@
+@font-face {
+  font-family: Raleway;
+  src: url("../fonts/Raleway-VariableFont_wght.ttf");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Raleway, sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 2rem;
+  }
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+  border: none;
+  font-family: Raleway, sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background-color: white;
+  color: #18518a;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 0.5rem 1rem 0.5rem rgba(79, 81, 80, 0.4);
+          box-shadow: 0 0.5rem 1rem 0.5rem rgba(79, 81, 80, 0.4);
+}
+
+.btn:active {
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: crimson;
+  color: white;
+}
+
+.form {
+  background-color: white;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__btn {
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  background-color: #4f5150;
+  color: white;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+  padding: 1.5rem 3rem;
+  border: none;
+}
+
+.form__btn:hover {
+  background-color: #18518a;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: transparent;
+  border-bottom: 0.2rem solid #4f5150;
+  -webkit-transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
+  width: 100%;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+
+.input-group--radio {
+  border: none;
+}
+
+.input-group:focus-within {
+  border-color: #18518a;
+}
+
+.input-group__input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: .5rem 0 1rem;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.input-group__label {
+  font-size: 1.6rem;
+}
+
+.input-group__radio {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.2rem solid #4f5150;
+  padding: 1rem 1.25rem;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
+}
+
+.input-group__radio:focus-within {
+  border-color: #18518a;
+}
+
+.input-group__radio input[type="radio"],
+.input-group__radio input[type="checkbox"] {
+  display: none;
+}
+
+.input-group__radio input[type="radio"]:checked + .__radio,
+.input-group__radio input[type="checkbox"]:checked + .__radio {
+  background-color: #18518a;
+  border-color: #18518a;
+}
+
+.input-group__radio input[type="radio"]:checked ~ .input-group__label,
+.input-group__radio input[type="checkbox"]:checked ~ .input-group__label {
+  font-weight: 900;
+  color: #18518a;
+}
+
+.input-group__radio .__radio {
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border: 0.2rem solid #4f5150;
+  -webkit-margin-end: 1rem;
+          margin-inline-end: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .form {
+    padding: 2rem 5rem;
+  }
+}
+
+.header {
+  padding: 1rem 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #18518a;
+}
+
+.header__logo {
+  width: 10rem;
+  height: auto;
+}
+
+.jumbotron {
+  height: 70vh;
+  padding: 5rem 2rem;
+  background-image: linear-gradient(-45deg, rgba(24, 81, 138, 0.7), rgba(155, 158, 157, 0.7)), url("../img/boy-with-a-laptop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.jumbotron__heading {
+  font-size: 3rem;
+  color: white;
+  font-weight: 900;
+  margin: 3rem 0 0;
+}
+
+.jumbotron__heading--small {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  opacity: .7;
+}
+
+.jumbotron__paragraph {
+  font-size: 1.8rem;
+  margin-block: 1rem;
+  color: white;
+  opacity: .7;
+}
+
+.jumbotron__btn {
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+  padding: 1.5rem 3rem;
+  color: #18518a;
+  background-color: white;
+  border: .3rem solid white;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+
+.section--center {
+  text-align: center;
+}
+
+.section__logo {
+  width: 12rem;
+  -webkit-margin-start: .1rem;
+          margin-inline-start: .1rem;
+}
+
+.section__heading {
+  font-size: 3rem;
+  margin-block: 1rem;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #4f5150;
+}
+
+.section__heading span {
+  color: #18518a;
+}
+
+.section__img {
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem solid #18518a;
+}
+
+.modal {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal__text .__text {
+  font-size: 3rem;
+}
+
+.modal__img {
+  display: none;
+  height: 60%;
+  width: 100%;
+  padding: 30rem;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  background: url("../img/idea-man.jpg");
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+}
+
+.modal__header {
+  padding: 2rem;
+}
+
+.modal__icon {
+  width: 3rem;
+  height: auto;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(79, 81, 80, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-container .svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.alert {
+  padding: 1rem 2rem 2rem;
+  border-left: .3rem solid grey;
+  margin: 0 2rem;
+}
+
+.alert--success {
+  border-color: forestgreen;
+  background-color: rgba(34, 139, 34, 0.3);
+}
+
+.alert--error {
+  border-color: tomato;
+  background-color: rgba(255, 99, 71, 0.3);
+}
+
+.alert__paragraph {
+  margin: 1rem 0 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #18518a;
+  color: white;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 2rem;
+  }
+  .header__logo {
+    width: 10rem;
+  }
+  .jumbotron {
+    padding: 5rem 20rem;
+    height: 90vh;
+  }
+  .jumbotron__heading {
+    font-size: 5rem;
+  }
+  .jumbotron__heading--small {
+    font-size: 2rem;
+  }
+  .jumbotron__paragraph {
+    font-size: 2rem;
+    margin-block: 2rem;
+  }
+  .section {
+    padding: 5rem;
+  }
+  .section__heading {
+    margin: 0;
+  }
+  .modal__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .modal__header {
+    padding: 2rem 5rem;
+  }
+  .alert {
+    margin: 0 5rem;
+  }
+  .footer {
+    padding: 5rem;
+  }
+}
+
+.list {
+  list-style: decimal-leading-zero;
+  margin: 0 0 0 3rem;
+}
+
+.list__item {
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+
+.list__item::marker {
+  color: #4f5150;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.list__heading {
+  color: #18518a;
+}
+
+.list__paragraph {
+  margin: 1rem 0 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .list {
+    margin: 0;
+  }
+  .list__paragraph {
+    width: 70%;
+  }
+}
+
+.card {
+  -webkit-margin-after: 3rem;
+          margin-block-end: 3rem;
+  text-align: left;
+  position: relative;
+  background-color: white;
+  padding: 0 0 1rem;
+}
+
+.card::after {
+  position: absolute;
+  bottom: -.2rem;
+  right: -.2rem;
+  content: '';
+  height: 3rem;
+  width: 50%;
+  padding: 1rem;
+  background: linear-gradient(-45deg, rgba(24, 81, 138, 0.7), rgba(155, 158, 157, 0.7));
+  z-index: -1;
+}
+
+.card__img {
+  width: 100%;
+  padding: 1rem;
+  border: 0.2rem solid #18518a;
+}
+
+.card__content {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+
+.card__heading span {
+  color: #18518a;
+}
+
+.card__heading--small {
+  font-size: 1.6rem;
+  opacity: .6;
+}
+
+.card__paragraph {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  font-size: 1.6rem;
+}
+/*# sourceMappingURL=main.css.map */

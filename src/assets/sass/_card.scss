@@ -1,0 +1,39 @@
+.card {
+  margin-block-end: 3rem;
+  text-align: left;
+  position: relative;
+  background-color: white;
+  padding: 0 0 1rem;
+
+  &::after {
+    position: absolute;
+    bottom: -.2rem;
+    right: -.2rem;
+    content: '';
+    height: 3rem;
+    width: 50%;
+    padding: 1rem;
+    background: $gradient;
+    z-index: -1;
+  }
+
+  &__img {
+    width: 100%;
+    padding: 1rem;
+    border: .2rem solid $base;
+  }
+
+  &__content {
+    margin-block-start: 1rem;
+  }
+
+  &__heading {
+    span {color: $base;}
+    &--small {font-size: 1.6rem;opacity: .6;}
+  }
+
+  &__paragraph {
+    margin-block-start: 1rem;
+    font-size: 1.6rem;
+  }
+}
