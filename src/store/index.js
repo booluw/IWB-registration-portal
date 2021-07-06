@@ -31,6 +31,17 @@ export default new Vuex.Store({
           reject(error)
         })
       })
+    },
+    fetchAll() {
+      return new Promise((resolve) => {
+        let users = []
+        db.collection('iwb').onSnapshot(querySnapshot => {
+          querySnapshot.forEach((doc) => {
+            users.push(doc.data())
+          })
+          resolve(users)
+        })
+      })
     }
   },
 })

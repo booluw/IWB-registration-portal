@@ -85,7 +85,7 @@
               <h4 class="card__heading--small">Director, IWB Schools Tour</h4>
               <p class="card__paragraph">
                 Max is a Leadership and Human Capacity Development Expert. He has a knack towards impact and value creation especially amongst young people.
-                Over the years he has served and still serve in different capacity development programs. Max is a fellow at StudentBuild Africa and sits as the Director of HR at Diatheke Empire.
+                Over the years he has served and still serves in different capacity development programs. Max is a fellow at StudentBuild Africa and sits as the Director of HR at Diatheke Empire.
               </p>
             </div>
           </div>

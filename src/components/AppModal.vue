@@ -28,14 +28,19 @@
               <img src="@/assets/img/qr-code.png" class="responsive-img"/>
               <img src="@/assets/img/event pass.png" class="responsive-img"/>
             </div>
-            <div class="d-flex justify-content-center">
-              <p class="paragraph">
-                <b>One last thing</b>
-                Get access to resources and event updates. Click below to join our Telegram Channel.
-              </p>
-              <a href="https://t.me/IdeasWorthBillions" class="btn form__btn" style="text-align: center">
-                Telegram channel
-              </a>
+            <div class="row m-0 justify-content-center">
+              <div class="mb-5 col-10">
+                <button class="btn form__btn" style="background: transparent;color:crimson;border: .2rem solid crimson;" @click="printCard">
+                  Download Pass
+                </button>
+                <p class="paragraph" style="text-align: center;">
+                  <b>One last thing</b>
+                  Get access to resources and event updates. Click below to join our Telegram Channel.
+                </p>
+                <a href="https://t.me/IdeasWorthBillions" class="btn form__btn" style="text-align: center">
+                  Telegram channel
+                </a>
+              </div>
             </div>
           </div>
           <form class="form" @submit.prevent="register()" v-if="alert.type !== 'success'">
@@ -117,11 +122,10 @@
 import { mapActions } from 'vuex'
 import paystack from 'vue-paystack'
 
-
-// import FileSaver from 'file-saver';
-// import { saveAs } from 'ileaver';
-// import * as htmlToImage from 'html-to-image';
-// import { toBlob } from 'html-to-image';
+import FileSaver from 'file-saver';
+import { saveAs } from 'file-saver';
+import * as htmlToImage from 'html-to-image';
+import { toBlob } from 'html-to-image';
 
 export default {
   name: 'AppModal',
@@ -192,16 +196,15 @@ export default {
       }
       this.clicked = false
     },
-  //   printCard() {
-  //     let node = document.getElementById('ID')
+  printCard() {
+    let node = document.getElementById('ID')
 
-  //     htmlToImage.toBlob(node).then(function (blob) {
-  //       FileSaver.saveAs(blob, `IBW-Ci2O.png`)
-  //     }).catch(function (error) {
-  //       alert(`Something went wrong ${error}`)
-  //     })
-  //   }
-  // }
+    htmlToImage.toBlob(node).then(function (blob) {
+    FileSaver.saveAs(blob, `IWB-Ci2O-pass.png`)
+    }).catch(function (error) {
+      alert(`Something went wrong ${error}`)
+    })
+  }
   }
 }
 </script>
