@@ -26,18 +26,15 @@
             </div>
             <div class="col-6" style="margin: 2rem auto;" id="ID">
               <img src="@/assets/img/qr-code.png" class="responsive-img"/>
-              <div class="modal__text">
-                {{ user.name }} / {{ reference.substr(this.reference.length - 5) }}
-              </div>
-              <br />
-              <div class="modal__text">
-                <del class="__text" style="text-decoration: line-through;">&dollar; 25</del>
-                &nbsp;&nbsp;&nbsp;<del class="__text">FREE</del>
-              </div>
+              <img src="@/assets/img/event pass.png" class="responsive-img"/>
             </div>
             <div class="d-flex justify-content-center">
-              <a href="https://t.me/IdeasWorthBillions" class="btn form__btn">
-                Join our Telegram channel
+              <p class="paragraph">
+                <b>One last thing</b>
+                Get access to resources and event updates. Click below to join our Telegram Channel.
+              </p>
+              <a href="https://t.me/IdeasWorthBillions" class="btn form__btn" style="text-align: center">
+                Telegram channel
               </a>
             </div>
           </div>
@@ -72,7 +69,7 @@
             <label class="input-group input-group--radio">
               <span class="input-group__label">
                 Select the options below for certificate of participation and conference souvenirs/materials. <br />
-                NB: Acceleration Conference is FREE, paying for souvenirs/materials and certifificate of participation is optional.
+                <i>NB:</i> Acceleration Conference is FREE, paying for souvenirs/materials and certificate of participation is optional.
               </span>
               <div class="d-flex mt-3">
                 <label for="swags" class="input-group__radio">
